@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <Box px={{ base: 4, md: 12 }} py={{ base: 10, md: 20 }}>
       <Box
-        maxW={{ base: "100%", md: "1140px" }}
+        maxW={{ base: "100%", md: "1300px" }}
         mx={{ base: "8px", md: "auto" }}
       >
         <Flex
