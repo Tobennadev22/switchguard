@@ -11,9 +11,11 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
+import Image from "next/image";
+
 export default function CTASection() {
   return (
-    <Box bg="#f5f5f3" py={16}>
+    <Box bg="#f1f4f8" py={16}>
       <Container maxW="7xl">
         <Box
           bg="#2f4a13"
@@ -29,7 +31,11 @@ export default function CTASection() {
           >
             {/* LEFT CONTENT */}
             <VStack align="start" spacing={6} maxW="520px">
-              <Heading fontSize={{ base: "18px", md: "32px" }} lineHeight="1.2">
+              <Heading
+                fontSize={{ base: "18px", md: "32px" }}
+                lineHeight="1.2"
+                fontWeight={"medium"}
+              >
                 Every Failed Transaction Is Lost Revenue
               </Heading>
 
@@ -45,8 +51,9 @@ export default function CTASection() {
                 color="whiteAlpha.800"
                 fontSize={{ base: "14px", md: "16px" }}
                 fontWeight="medium"
+                fontStyle={"italic"}
               >
-                Let’s quantify — and recover — what you’re losing.
+                Let’s quantify and recover what you’re losing.
               </Text>
 
               <Button
@@ -69,41 +76,12 @@ export default function CTASection() {
               position="relative"
               h="200px"
             >
-              {/* Green Gear */}
-              <Box
-                position="absolute"
-                right="120px"
-                top="10px"
-                w="120px"
-                h="120px"
-                bg="#e7eadf"
-                borderRadius="full"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                fontSize="50px"
-                color="#5a7d1a"
-              >
-                $
-              </Box>
-
-              {/* Red Gear */}
-              <Box
-                position="absolute"
-                right="0"
-                bottom="0"
-                w="110px"
-                h="110px"
-                bg="#f1dada"
-                borderRadius="full"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                fontSize="40px"
-                color="#e05353"
-              >
-                ✕
-              </Box>
+              <Image
+                src="/image/moneygear.png"
+                alt="switchguard-money-gear"
+                width={400}
+                height={200}
+              />
             </Flex>
           </Grid>
         </Box>

@@ -64,7 +64,7 @@ export default function Result() {
               {items.map((item, index) => (
                 <HStack key={index} spacing={3} align="start">
                   <Box
-                    bg="green.500"
+                    bg="primaryColor.700"
                     color="white"
                     borderRadius="full"
                     boxSize="20px"
@@ -84,12 +84,12 @@ export default function Result() {
 
             {/* CTA */}
             <Button
-              bg="green.700"
+              bg="primaryColor.700"
               color="white"
               px={8}
               py={6}
               borderRadius="full"
-              _hover={{ bg: "green.800" }}
+              _hover={{ bg: "primaryColor.500" }}
             >
               Book a Call
             </Button>

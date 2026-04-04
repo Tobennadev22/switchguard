@@ -44,7 +44,7 @@ export default function Product() {
             Operational Playbooks
             <br />
             for{" "}
-            <Box as="span" color="green.700">
+            <Box as="span" color="primaryColor.700">
               High-Stakes
             </Box>{" "}
             Fintech.

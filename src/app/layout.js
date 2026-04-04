@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
         <ChakraProvider theme={theme}>
           <Navbar />
           {children}
+          <Footer />
         </ChakraProvider>
-        <Footer />
       </body>
     </html>
   );

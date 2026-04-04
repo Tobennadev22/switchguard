@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Flex, Text, Heading, Button, VStack } from "@chakra-ui/react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const MotionFlex = motion.create(Flex);
@@ -11,6 +12,7 @@ const cards = [
     value: "$489k",
     change: "-7.69%",
     color: "red.400",
+    name: "/image/Chart-1.png",
     description: "10–30% of transactions fail across most systems",
   },
   {
@@ -18,6 +20,7 @@ const cards = [
     value: "$325k",
     change: "+18.34%",
     color: "green.400",
+    name: "/image/Chart-2.png",
     description: "Failed transactions are rarely retried or recovered",
   },
   {
@@ -25,6 +28,7 @@ const cards = [
     value: "$54,000",
     change: "",
     color: "orange.400",
+    name: "/image/Chart-3.png",
     description: "Settlement mismatches go undetected",
   },
   {
@@ -32,6 +36,7 @@ const cards = [
     value: "34%",
     change: "",
     color: "orange.400",
+    name: "/image/Chart-4.png",
     description: "Routing decisions are often inefficient",
   },
 ];
@@ -73,37 +78,32 @@ export default function PaymentProblemSection() {
               minW="300px"
               bg="white"
               color="gray.800"
-              p={6}
+              p={2}
               borderRadius="xl"
               boxShadow="lg"
             >
-              <Text fontSize="sm" color="gray.500">
-                Transactions
-              </Text>
+              <Image
+                src={card.name}
+                alt={card.title}
+                width={450}
+                height={150}
+              />
 
-              <Text fontWeight="bold" mt={1}>
-                {card.title}
-              </Text>
-
-              <Text fontSize="3xl" fontWeight="bold" mt={4}>
-                {card.value}
-              </Text>
-
-              {card.change && (
+              {/* {card.change && (
                 <Text color={card.color} fontSize="sm">
                   {card.change}
                 </Text>
-              )}
+              )} */}
 
               <Box
-                mt={4}
-                h="40px"
-                bg={card.color}
+                // mt={4}
+                h="20px"
+                // bg={card.color}
                 borderRadius="md"
                 opacity={0.2}
               />
 
-              <Text fontSize="sm" mt={4} color="gray.600">
+              <Text fontSize="sm" color="gray.600">
                 {card.description}
               </Text>
             </Box>
