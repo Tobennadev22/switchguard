@@ -25,8 +25,9 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Services", href: "/#services" },
-  { name: "Products", href: "/products" },
+  { name: "Services", href: "/servicepage" },
+  { name: "Resources", href: "/resources" },
+  { name: "Meet The Founder", href: "/founder" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -97,6 +98,8 @@ export default function Navbar() {
           <Button
             display={{ base: "none", md: "inline-flex" }}
             bg="primaryColor.700"
+            as="a"
+            href="/contact"
             color="white"
             borderRadius="full"
             px={6}
@@ -139,8 +142,11 @@ export default function Navbar() {
 
               <Button
                 mt={4}
+                as="a"
+                href="/contact"
                 bg="primaryColor.700"
                 color="white"
+                fontSize={{ base: "12px", md: "14px" }}
                 borderRadius="full"
                 w="full"
                 _hover={{ bg: "primaryColor.500" }}

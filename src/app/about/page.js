@@ -1,11 +1,12 @@
 import { Box, Button, Text, Link } from "@chakra-ui/react";
+import HeroWhoWeAre from "../sections/HeroWhoWeAre";
+import CoreValues from "../sections/CoreValues";
 
 export default function Home() {
   return (
     <Box>
-      <Text fontSize="2xl" fontWeight="bold">
-        About Page
-      </Text>
+      <HeroWhoWeAre />
+      <CoreValues />
     </Box>
   );
 }

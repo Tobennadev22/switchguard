@@ -38,7 +38,7 @@ export default function Hero() {
               mb={6}
               mx={{ base: 9, md: "0" }}
             >
-              Building Tailored solutions
+              Building a Payment Resilience Hub
             </Box>
 
             {/* Heading */}
@@ -51,8 +51,7 @@ export default function Hero() {
               letterSpacing={-1.4}
               textAlign={{ base: "center", md: "left" }}
             >
-              Increase Your Payment Success Rate by Up to 25% Without Changing
-              Your Infrastructure
+              Your Payment Infrastructure Is Losing Revenue. We Fix That.
             </Heading>
 
             {/* Description */}
@@ -63,15 +62,18 @@ export default function Hero() {
               maxW="500px"
               mb={8}
             >
-              SwitchGuard helps fintechs identify, recover, and optimise failed
-              transactions across cards, bank transfers, USSD, and POS, turning
-              payment inefficiencies into measurable revenue gains.
+              SwitchGuard helps fintechs identify, recover, and optimize failed
+              transactions across cards, bank transfers, USSd, POS and other
+              payment channels turning payment inefficiencies into measurable
+              revenue gains
             </Text>
 
             {/* Buttons */}
             <HStack spacing={4} flexWrap="wrap">
               <Button
                 bg="primaryColor.700"
+                as="a"
+                href="/contact"
                 color="white"
                 px={6}
                 py={6}
@@ -80,13 +82,16 @@ export default function Hero() {
                 fontSize={{ base: "12px", md: "14px" }}
                 w={{ base: "100%", md: "auto" }}
               >
-                Book a Strategy Call
+                Book a Discovery Call
               </Button>
 
               <Button
                 variant="outline"
+                as="a"
+                href="https://tally.so/r/BzZKvR"
                 borderColor="primaryColor.500"
                 color="primaryColor.600"
+                w={{ base: "100%", md: "auto" }}
                 px={6}
                 py={6}
                 borderRadius="full"

@@ -18,7 +18,7 @@ export default function CTASection() {
     <Box bg="#f1f4f8" py={16}>
       <Container maxW="7xl">
         <Box
-          bg="#2f4a13"
+          bg="#131e08"
           borderRadius="2xl"
           px={{ base: 6, md: 12 }}
           py={{ base: 10, md: 16 }}
@@ -36,36 +36,29 @@ export default function CTASection() {
                 lineHeight="1.2"
                 fontWeight={"medium"}
               >
-                Every Failed Transaction Is Lost Revenue
+                Ready to Stop Losing Revenue?
               </Heading>
 
               <Text
                 color="whiteAlpha.800"
                 fontSize={{ base: "12px", md: "16px" }}
               >
-                If your system processes thousands of transactions daily, even
-                small inefficiencies compound quickly.
-              </Text>
-
-              <Text
-                color="whiteAlpha.800"
-                fontSize={{ base: "14px", md: "16px" }}
-                fontWeight="medium"
-                fontStyle={"italic"}
-              >
-                Let’s quantify and recover what you’re losing.
+                Book a free 30-minute discovery call. We will tell you exactly
+                where to start.
               </Text>
 
               <Button
                 bg="#e7eadf"
                 color="#5a7d1a"
+                as="a"
+                href="/contact"
                 px={8}
                 py={6}
                 borderRadius="full"
                 fontWeight="medium"
                 _hover={{ bg: "#dfe5d3" }}
               >
-                Book a Diagnostic Call
+                Book Your Free Call
               </Button>
             </VStack>
 

@@ -19,16 +19,17 @@ export default function SwitchguardPartners() {
           borderRadius="full"
           bgGradient="linear(to-r, orange.400, orange.600)"
           color="white"
-          fontSize="12px"
+          fontSize="14px"
           fontWeight="regular"
           mb={6}
+          textTransform={"none"}
         >
           Companies We've Worked With
         </Badge>
 
         {/* Heading */}
         <Text
-          fontSize={{ base: "2xl", md: "4xl", lg: "32px" }}
+          fontSize={{ base: "18px", md: "32px", lg: "32px" }}
           fontWeight="medium"
           color="gray.600"
           lineHeight="shorter"
@@ -48,25 +49,25 @@ export default function SwitchguardPartners() {
           <Image
             src="/image/visa.png"
             alt="Visa"
-            h="40px"
+            h={{ base: "20px", md: "40px" }}
             objectFit="contain"
           />
           <Image
             src="/image/Amex.png"
             alt="American Express"
-            w="180px"
+            w={{ base: "100px", md: "180px" }}
             objectFit="contain"
           />
           <Image
             src="/image/mastercard.png"
             alt="Mastercard"
-            w="180px"
+            w={{ base: "100px", md: "180px" }}
             objectFit="contain"
           />
           <Image
             src="/image/unionpay.png"
             alt="UnionPay"
-            w="180px"
+            w={{ base: "100px", md: "180px" }}
             objectFit="contain"
           />
         </HStack>
