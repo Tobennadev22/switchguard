@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 
-export default function ContactPage() {
+export default function Contact() {
   const toast = useToast();
 
   const [form, setForm] = useState({
@@ -29,46 +29,67 @@ export default function ContactPage() {
 
   const [loading, setLoading] = useState(false);
 
+  // Handle Inputs
   const handleChange = (e) => {
-    setForm({
-      ...form,
+    setForm((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value,
+    }));
+  };
+
+  // Reset Form
+  const resetForm = () => {
+    setForm({
+      name: "",
+      company: "",
+      email: "",
+      situation: "",
+      message: "",
     });
   };
 
+  // Submit Form
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setLoading(true);
 
     try {
-      // 🔥 Replace this with your API endpoint
-      console.log("Form Data:", form);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+      // console.log(data);
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
 
       toast({
-        title: "Message sent!",
-        description: "We’ll get back to you shortly.",
+        title: "Message Sent",
+        description: data.message || "We’ll get back to you shortly.",
         status: "success",
-        duration: 4000,
+        duration: 5000,
         isClosable: true,
       });
 
-      setForm({
-        name: "",
-        company: "",
-        email: "",
-        situation: "",
-        message: "",
-      });
+      resetForm();
     } catch (error) {
       toast({
-        title: "Something went wrong",
+        title: "Failed to Send",
+        description: error.message || "Please try again later.",
         status: "error",
         duration: 4000,
         isClosable: true,
       });
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
@@ -92,11 +113,10 @@ export default function ContactPage() {
             </Text>
           </VStack>
 
-          {/* FORM CARD */}
+          {/* FORM */}
           <Box bg="white" p={{ base: 6, md: 10 }} borderRadius="xl">
             <form onSubmit={handleSubmit}>
               <VStack spacing={6}>
-                {/* FULL NAME */}
                 <FormControl isRequired>
                   <FormLabel>Full Name</FormLabel>
                   <Input
@@ -108,7 +128,6 @@ export default function ContactPage() {
                   />
                 </FormControl>
 
-                {/* COMPANY */}
                 <FormControl isRequired>
                   <FormLabel>Company Name</FormLabel>
                   <Input
@@ -120,7 +139,6 @@ export default function ContactPage() {
                   />
                 </FormControl>
 
-                {/* EMAIL */}
                 <FormControl isRequired>
                   <FormLabel>Email Address</FormLabel>
                   <Input
@@ -133,7 +151,6 @@ export default function ContactPage() {
                   />
                 </FormControl>
 
-                {/* DROPDOWN */}
                 <FormControl isRequired>
                   <FormLabel>What best describes your situation?</FormLabel>
                   <Select
@@ -151,7 +168,6 @@ export default function ContactPage() {
                   </Select>
                 </FormControl>
 
-                {/* MESSAGE */}
                 <FormControl>
                   <FormLabel>Message (optional)</FormLabel>
                   <Textarea
@@ -163,17 +179,16 @@ export default function ContactPage() {
                   />
                 </FormControl>
 
-                {/* BUTTON */}
                 <Button
                   type="submit"
-                  //   width="full"
-                  alignItems={{ base: "center", md: "left" }}
                   size="lg"
                   bg="primaryColor.700"
                   color="white"
                   _hover={{ bg: "primaryColor.500" }}
                   isLoading={loading}
+                  loadingText="Sending..."
                   borderRadius="full"
+                  w="full"
                 >
                   Send Message
                 </Button>

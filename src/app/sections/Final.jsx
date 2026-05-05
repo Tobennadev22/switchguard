@@ -51,7 +51,7 @@ export default function CTASection() {
                 bg="#e7eadf"
                 color="#5a7d1a"
                 as="a"
-                href="/contact"
+                href="https://www.calendly.com/switchguard/discovery-call"
                 px={8}
                 py={6}
                 borderRadius="full"

@@ -10,6 +10,7 @@ import Final from "./sections/Final";
 import WhoWeAre from "./sections/WhoWeAre";
 import TrustNote from "./sections/TrustNote";
 import WhoWeServe from "./sections/WhoWeServe";
+import Testimonials from "./sections/Testimonials";
 export default function Home() {
   return (
     <Box>
@@ -19,6 +20,7 @@ export default function Home() {
       <WhoWeAre />
       <WhoWeServe />
       <TrustNote />
+      <Testimonials />
       <Project />
       <Final />
     </Box>

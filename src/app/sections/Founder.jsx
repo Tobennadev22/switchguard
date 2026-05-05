@@ -56,11 +56,11 @@ export default function Founder() {
 
             {/* ROLE */}
             <Text color="green.400" fontWeight="semibold" letterSpacing="wide">
-              FOUNDER & CHIEF ARCHITECT
+              FOUNDER, SWITCHGUARD ADVISORY
             </Text>
 
             {/* DESCRIPTION */}
-            <Text
+            {/* <Text
               color="gray.300"
               fontSize={{ base: "14px", md: "16px" }}
               lineHeight="1.8"
@@ -71,14 +71,28 @@ export default function Founder() {
                 GTBank, Access Bank, Kuda, and Intouch
               </Text>
               , Temitayo has seen payment failures from every conceivable angle.
-            </Text>
+            </Text> */}
 
-            <Text color="gray.300" lineHeight="1.8">
-              Her "Forensic Precision" approach was born from lived
-              experience—managing systems that process billions while fighting
-              the invisible frictions that drain revenue. At SwitchGuard, she
-              brings this insider expertise to scaling fintechs, providing the
-              deep technical clarity that generic consultants lack.
+            <Text
+              color="gray.300"
+              lineHeight="1.8"
+              fontSize={{ base: "12px", md: "14px" }}
+            >
+              Temitayo Jeane Aromolaran is a payment infrastructure specialist
+              with over 15 years of hands-on experience building, fixing, and
+              optimising payment systems across African and European corridors.
+              She has operated at the intersection of engineering and commercial
+              outcomes at institutions including GTBank, Access Bank, Kuda,
+              Intouch, BudPay, Fast Credit, and Simplify Synergy across cards,
+              bank transfers, USSD, mobile money, and POS. Her work has spanned
+              Nigeria, Ghana, Kenya, and European markets. SwitchGuard Advisory
+              exists because most payment failures are preventable and most
+              teams do not have the time, tools, or institutional knowledge to
+              prevent them. Temitayo built SwitchGuard to change that: to give
+              scaling fintechs access to forensic payment expertise that finds
+              the revenue they are losing silently, and builds the
+              infrastructure that keeps them from losing it again. She is based
+              in the UK and works with clients across Africa and Europe.
             </Text>
 
             {/* DIVIDER */}

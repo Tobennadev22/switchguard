@@ -45,10 +45,10 @@ const Card = ({ icon, title, description, tags, color }) => (
   >
     <VStack align="start" spacing={4}>
       <Box
-        borderRadius="100px"
-        bg={color}
-        width={12}
-        height={12}
+        // borderRadius="100px"
+        // bg={color}
+        // width={12}
+        // height={12}
         color="primaryColor.500"
       >
         <Icon
@@ -56,7 +56,8 @@ const Card = ({ icon, title, description, tags, color }) => (
           boxSize={6}
           display="flex"
           gap="0.25em"
-          align-items="center"
+          justifyContent="center"
+          alignItems="center"
         />
       </Box>
 
@@ -163,7 +164,12 @@ export default function PaymentRailsSection() {
             // _hover={{ shadow: "md" }}
           >
             <HStack align="start" spacing={6}>
-              <Box p={4} bg="lime.400" borderRadius="xl" color="white">
+              <Box
+                p={4}
+                bg="lime.400"
+                borderRadius="xl"
+                color="primaryColor.500"
+              >
                 <Wallet size={28} />
               </Box>
 

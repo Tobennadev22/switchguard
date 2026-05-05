@@ -84,6 +84,8 @@ export default function Result() {
 
             {/* CTA */}
             <Button
+              as="a"
+              href="https://www.calendly.com/switchguard/discovery-call"
               bg="primaryColor.700"
               color="white"
               px={8}

@@ -24,20 +24,31 @@ const resources = [
     type: "PDF Checklist",
     title: "20-Point Infrastructure Checklist",
     desc: "A practical checklist for auditing infrastructure health, latency bottlenecks, and redundant failover paths.",
+    link: "https://payhip.com/b/JngK0",
   },
   {
     id: "02",
-    status: "COMING SOON",
+    status: "AVAILABLE NOW",
     type: "Digital PDF",
     title: "Querying Revenue: The SQL Library",
     desc: "Production-ready SQL queries for failure analysis, multi-currency reconciliation, and automated regulatory reporting.",
+    link: "https://payhip.com/b/XTh8G",
   },
   {
     id: "03",
-    status: "COMING SOON",
+    status: "AVAILABLE NOW",
     type: "E-Book / Course",
     title: "Payment Resilience Playbook",
     desc: "The definitive guide for fintech leaders on building high-performance systems capable of 99.999% uptime in volatile markets.",
+    link: "https://payhip.com/b/B34C9",
+  },
+  {
+    id: "04",
+    status: "AVAILABLE NOW",
+    type: "E-Book / Course",
+    title: "The Complete Resilience Bundle",
+    desc: "The definitive guide for fintech leaders on building high-performance systems capable of 99.999% uptime in volatile markets.",
+    link: "https://payhip.com/b/dWIyz",
   },
 ];
 
@@ -207,6 +218,8 @@ export default function PaymentToolsPage() {
                 <Flex justify={{ base: "flex-start", md: "center" }}>
                   {item.status === "AVAILABLE NOW" ? (
                     <Button
+                      as="a"
+                      href={item.link}
                       bg="primaryColor.500"
                       color="white"
                       _hover={{ bg: "primaryColor.600" }}

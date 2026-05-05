@@ -67,7 +67,7 @@ export default function Product() {
             {/* Image */}
             <Box position="relative">
               <Image
-                src="/image/switchguardproduct-1.png"
+                src="/image/completepaymentbundle.avif"
                 alt="Card Failure"
                 w="100%"
                 objectFit="cover"
@@ -88,13 +88,15 @@ export default function Product() {
                 Audit • Query • Protect • 3 Products, One Price •
               </Text>
 
-              <Text fontSize={{ base: "18px", md: "24px" }}>
+              {/* <Text fontSize={{ base: "18px", md: "24px" }}>
                 £297 (Save £127)
-              </Text>
+              </Text> */}
 
               <Box w="100%" h="1px" bg="gray.200" />
 
               <Button
+                as="a"
+                href="https://payhip.com/b/dWIyz"
                 mt={2}
                 bg="primaryColor.700"
                 color="white"
@@ -113,7 +115,7 @@ export default function Product() {
             {/* Image */}
             <Box position="relative">
               <Image
-                src="/image/switchguardproduct-2.png"
+                src="/image/resilientplaybook.avif"
                 alt="Optimisation"
                 w="100%"
                 objectFit="cover"
@@ -133,12 +135,14 @@ export default function Product() {
               <Text color="gray.600" fontSize="sm">
                 The Complete Guide to Payment Infrastructure That Performs
               </Text>
-
-              <Text fontSize={{ base: "18px", md: "24px" }}>£247</Text>
+              {/* 
+              <Text fontSize={{ base: "18px", md: "24px" }}>£247</Text> */}
 
               <Box w="100%" h="1px" bg="gray.200" />
 
               <Button
+                as="a"
+                href="https://payhip.com/b/B34C9"
                 mt={2}
                 bg="primaryColor.700"
                 color="white"
@@ -157,7 +161,7 @@ export default function Product() {
             {/* Image */}
             <Box position="relative">
               <Image
-                src="/image/switchguardproduct-2.png"
+                src="/image/20pointinfrustrature.avif"
                 alt="Optimisation"
                 w="100%"
                 objectFit="cover"
@@ -178,10 +182,12 @@ export default function Product() {
                 Payment Resilience Playbook SQL Implementation Vault
               </Text>
 
-              <Text fontSize={{ base: "18px", md: "24px" }}>£50</Text>
-              <Box w="100%" h="1px" bg="gray.200" />
+              {/* <Text fontSize={{ base: "18px", md: "24px" }}>£50</Text>
+              <Box w="100%" h="1px" bg="gray.200" /> */}
 
               <Button
+                as="a"
+                href="https://payhip.com/b/JngK0"
                 mt={2}
                 bg="primaryColor.700"
                 color="white"
@@ -200,7 +206,7 @@ export default function Product() {
             {/* Image */}
             <Box position="relative">
               <Image
-                src="/image/switchguardproduct-2.png"
+                src="/image/queryrevenue.avif"
                 alt="Optimisation"
                 w="100%"
                 objectFit="cover"
@@ -218,13 +224,15 @@ export default function Product() {
               </Heading>
 
               <Text color="gray.600" fontSize="sm">
-                The Complete SQL Quary Library for Fintech Engineers
+                The Complete SQL Query Library for Fintech Engineers
               </Text>
 
-              <Text fontSize={{ base: "18px", md: "24px" }}>£127</Text>
+              {/* <Text fontSize={{ base: "18px", md: "24px" }}>£127</Text> */}
               <Box w="100%" h="1px" bg="gray.200" />
 
               <Button
+                as="a"
+                href="https://payhip.com/b/XTh8G"
                 mt={2}
                 bg="primaryColor.700"
                 color="white"

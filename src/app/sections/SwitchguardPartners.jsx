@@ -24,7 +24,7 @@ export default function SwitchguardPartners() {
           mb={6}
           textTransform={"none"}
         >
-          Companies We've Worked With
+          Payment Ecosystems We Operate In
         </Badge>
 
         {/* Heading */}
@@ -79,7 +79,8 @@ export default function SwitchguardPartners() {
           fontStyle="italic"
           fontWeight="semibold"
         >
-          15+ years across Africa–Europe payment corridors
+          15+ years of hands-on experience across these schemes, rails, and
+          corridors.
         </Text>
       </Container>
     </Box>

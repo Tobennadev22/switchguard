@@ -83,7 +83,7 @@ export default function PaymentProblemSection() {
           px={8}
           borderRadius="full"
           as="a"
-          href="/contact"
+          href="https://www.calendly.com/switchguard/discovery-call"
         >
           Book a Call
         </Button>

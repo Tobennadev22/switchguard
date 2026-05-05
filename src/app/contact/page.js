@@ -1,10 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import ContactPage from "../sections/Contact";
+import Contact from "../sections/Contact";
 
 function page() {
   return (
     <Box>
-      <ContactPage />
+      <Contact />
     </Box>
   );
 }

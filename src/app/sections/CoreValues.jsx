@@ -71,6 +71,8 @@ export default function CoreValues() {
         </Text> */}
 
           <Button
+          as= "a"
+          href="https://www.calendly.com/switchguard/discovery-call"
             mt={2}
             bg="primaryColor.700"
             color="white"

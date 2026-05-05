@@ -207,13 +207,14 @@ export default function Services() {
                   {p.desc}
                 </Text>
 
-                <HStack spacing={2} wrap="wrap">
-                  {p.features.map((f, idx) => (
+                {/* <HStack spacing={2} wrap="wrap">
+                  {p.duration.map((f, idx) => (
                     <Badge key={idx} bg="gray.100">
                       {f}
                     </Badge>
                   ))}
-                </HStack>
+                  <Text> {p.duration}</Text>
+                </HStack> */}
               </Box>
 
               <Flex mt={6} justify="space-between" align="center">
@@ -272,33 +273,34 @@ export default function Services() {
 const products = [
   {
     tag: "3 WEEK AUDIT",
-    title: "Payment Resilience Diagnostic",
-    desc: "Forensic discovery of revenue leakage and technical debt.",
-    features: ["Silent Leak Audit", "Logic Gap Analysis", "Scorecard"],
+    title: "The Payment Resilience Diagnostic",
+    desc: "A forensic audit of your payment infrastructure. We identify where transactions are failing, quantify the revenue impact, and deliver a prioritised fix list — the Silent Leak Audit, the Logic Gap Analysis, and the Resilience Scorecard.",
+    // features: ["Silent Leak Audit", "Logic Gap Analysis", "Scorecard"],
+    // duration: "3weeks",
     price: "£10,000 (Fixed Fee)",
     cta: "Book the Diagnostic",
   },
   {
-    tag: "3–6 MONTHS BUILD",
+    tag: "3–4 MONTHS BUILD",
     title: "Revenue Protection Architecture",
-    desc: "Implementation of high-fidelity infrastructure.",
-    features: ["Monitoring Engine", "Routing", "SOP Library"],
+    desc: "We build the infrastructure that prevents failures from recurring. Custom monitoring engine, resilience SOP library, and smart-routing logic — all designed around your specific payment stack and corridors.",
+    // features: ["Monitoring Engine", "Routing", "SOP Library"],
     price: "£30,000 (Project)",
     cta: "Start Project",
   },
   {
-    tag: "CONTINUOUS RETAINER",
+    tag: "6 MONTHS",
     title: "Infrastructure Intelligence Advisory",
-    desc: "External technical direction for scaling fintechs.",
-    features: ["Performance Reviews", "Dashboard", "Support"],
+    desc: "Ongoing payment performance intelligence. Monthly reviews, a live Power BI dashboard, priority support with an 8-hour SLA, and a named expert who knows your infrastructure as well as your own team.",
+    // features: ["Performance Reviews", "Dashboard", "Support"],
     price: "£4,000 / Month",
     cta: "Enquire",
   },
   {
-    tag: "MARKET INTELLIGENCE",
+    tag: "ANNUALLY",
     title: "Annual Benchmark Report",
-    desc: "Market data on latency and success rates.",
-    features: ["Anonymised Data", "Trends", "Investor Ready"],
+    desc: "SwitchGuard's annual analysis of payment infrastructure performance across African and European corridors. Success rates, settlement benchmarks, provider rankings, and strategic commentary — published every Q1.",
+    // features: ["Anonymised Data", "Trends", "Investor Ready"],
     price: "£1,500 / Report",
     cta: "Download",
   },

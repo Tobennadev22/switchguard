@@ -36,9 +36,9 @@ export default function Hero() {
               borderRadius="full"
               fontSize="sm"
               mb={6}
-              mx={{ base: 9, md: "0" }}
+              mx={{ base: "auto", md: "0" }}
             >
-              Building a Payment Resilience Hub
+              Now Available: The Complete Resilience Bundle — £297
             </Box>
 
             {/* Heading */}
@@ -63,7 +63,7 @@ export default function Hero() {
               mb={8}
             >
               SwitchGuard helps fintechs identify, recover, and optimize failed
-              transactions across cards, bank transfers, USSd, POS and other
+              transactions across cards, bank transfers, USSD, POS and other
               payment channels turning payment inefficiencies into measurable
               revenue gains
             </Text>
