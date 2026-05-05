@@ -21,7 +21,7 @@ export default function Founder() {
           >
             <Box bg="#f2f2f2" borderRadius="xl" overflow="hidden">
               <Image
-                src="/image/founder.png" // replace with your image
+                src="/image/TemitayoJeaneAromolaran.jpeg" // replace with your image
                 alt="Founder"
                 w="100%"
                 h={{ base: "300px", md: "100%" }}

@@ -92,7 +92,7 @@ export default function HeroWhoWeAre() {
           {/* RIGHT IMAGE */}
           <Box flex="1" position="relative" w="100%">
             <Image
-              src="/image/founder.png"
+              src="/image/TemitayoJeaneAromolaran.jpeg"
               alt="Founder"
               borderRadius="xl"
               objectFit="cover"

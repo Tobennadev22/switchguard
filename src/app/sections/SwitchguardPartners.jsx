@@ -47,7 +47,7 @@ export default function SwitchguardPartners() {
           mb={6}
         >
           <Image
-            src="/image/visa.png"
+            src="/image/Visa.png"
             alt="Visa"
             h={{ base: "20px", md: "40px" }}
             objectFit="contain"
@@ -59,13 +59,13 @@ export default function SwitchguardPartners() {
             objectFit="contain"
           />
           <Image
-            src="/image/mastercard.png"
+            src="/image/Mastercard.png"
             alt="Mastercard"
             w={{ base: "100px", md: "180px" }}
             objectFit="contain"
           />
           <Image
-            src="/image/unionpay.png"
+            src="/image/Unionpay.png"
             alt="UnionPay"
             w={{ base: "100px", md: "180px" }}
             objectFit="contain"
