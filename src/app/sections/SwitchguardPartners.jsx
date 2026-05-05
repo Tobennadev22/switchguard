@@ -7,82 +7,85 @@ import {
   VStack,
   Badge,
 } from "@chakra-ui/react";
+import FadeBox from "../utils/FadeBox";
 
 export default function SwitchguardPartners() {
   return (
     <Box py={20}>
-      <Container maxW="6xl" textAlign="center">
-        {/* Top Badge */}
-        <Badge
-          px={6}
-          py={2}
-          borderRadius="full"
-          bgGradient="linear(to-r, orange.400, orange.600)"
-          color="white"
-          fontSize="14px"
-          fontWeight="regular"
-          mb={6}
-          textTransform={"none"}
-        >
-          Payment Ecosystems We Operate In
-        </Badge>
+      <FadeBox>
+        <Container maxW="6xl" textAlign="center">
+          {/* Top Badge */}
+          <Badge
+            px={6}
+            py={2}
+            borderRadius="full"
+            bgGradient="linear(to-r, orange.400, orange.600)"
+            color="white"
+            fontSize="14px"
+            fontWeight="regular"
+            mb={6}
+            textTransform={"none"}
+          >
+            Payment Ecosystems We Operate In
+          </Badge>
 
-        {/* Heading */}
-        <Text
-          fontSize={{ base: "18px", md: "32px", lg: "32px" }}
-          fontWeight="medium"
-          color="gray.600"
-          lineHeight="shorter"
-          mb={12}
-        >
-          Trusted expertise across global <br />
-          payment ecosystems
-        </Text>
+          {/* Heading */}
+          <Text
+            fontSize={{ base: "18px", md: "32px", lg: "32px" }}
+            fontWeight="medium"
+            color="gray.600"
+            lineHeight="shorter"
+            mb={12}
+          >
+            Trusted expertise across global <br />
+            payment ecosystems
+          </Text>
 
-        {/* Logos Row */}
-        <HStack
-          spacing={{ base: 6, md: 10 }}
-          justify="center"
-          flexWrap="wrap"
-          mb={6}
-        >
-          <Image
-            src="/image/Visa.png"
-            alt="Visa"
-            h={{ base: "20px", md: "40px" }}
-            objectFit="contain"
-          />
-          <Image
-            src="/image/Amex.png"
-            alt="American Express"
-            w={{ base: "100px", md: "180px" }}
-            objectFit="contain"
-          />
-          <Image
-            src="/image/Mastercard.png"
-            alt="Mastercard"
-            w={{ base: "100px", md: "180px" }}
-            objectFit="contain"
-          />
-          <Image
-            src="/image/Unionpay.png"
-            alt="UnionPay"
-            w={{ base: "100px", md: "180px" }}
-            objectFit="contain"
-          />
-        </HStack>
+          {/* Logos Row */}
+          <HStack
+            spacing={{ base: 6, md: 10 }}
+            justify="center"
+            flexWrap="wrap"
+            mb={6}
+          >
+            <Image
+              src="/image/Visa.png"
+              alt="Visa"
+              h={{ base: "20px", md: "40px" }}
+              objectFit="contain"
+            />
+            <Image
+              src="/image/Amex.png"
+              alt="American Express"
+              w={{ base: "100px", md: "180px" }}
+              objectFit="contain"
+            />
+            <Image
+              src="/image/Mastercard.png"
+              alt="Mastercard"
+              w={{ base: "100px", md: "180px" }}
+              objectFit="contain"
+            />
+            <Image
+              src="/image/Unionpay.png"
+              alt="UnionPay"
+              w={{ base: "100px", md: "180px" }}
+              objectFit="contain"
+            />
+          </HStack>
 
-        {/* Bottom Text */}
-        <Text
-          fontSize={{ base: "14px", md: "16px" }}
-          color="primaryColor.700"
-          fontStyle="italic"
-          fontWeight="semibold"
-        >
-          15+ years of hands-on experience across these schemes, rails, and
-          corridors.
-        </Text>
-      </Container>
+          {/* Bottom Text */}
+          <Text
+            fontSize={{ base: "14px", md: "16px" }}
+            color="primaryColor.700"
+            fontStyle="italic"
+            fontWeight="semibold"
+          >
+            15+ years of hands-on experience across these schemes, rails, and
+            corridors.
+          </Text>
+        </Container>
+      </FadeBox>
     </Box>
   );
 }

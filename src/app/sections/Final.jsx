@@ -74,6 +74,7 @@ export default function CTASection() {
                 alt="switchguard-money-gear"
                 width={400}
                 height={200}
+                display={{ base: "none", md: "block" }}
               />
             </Flex>
           </Grid>
