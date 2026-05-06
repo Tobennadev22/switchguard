@@ -11,6 +11,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { Quote } from "lucide-react";
+import FadeBox from "../utils/FadeBox";
 
 const testimonials = [
   {
@@ -36,75 +37,82 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <Box bg="#f9f9f9" py={{ base: 12, md: 20 }}>
-      <Container maxW="6xl">
-        <VStack spacing={12}>
-          {/* Header */}
-          <VStack spacing={3} textAlign="center">
-            <Text fontSize="sm" color="gray.500">
-              Testimonial
-            </Text>
-            <Heading
-              fontSize={{ base: "18px", md: "32px", lg: "32px" }}
-              fontWeight="medium"
-              color="gray.600"
-              lineHeight="shorter"
-              mb={6}
-            >
-              What our clients say
-            </Heading>
-          </VStack>
-
-          {/* Cards */}
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8} w="full">
-            {testimonials.map((item, index) => (
-              <Box
-                key={index}
-                bg="white"
-                p={6}
-                borderRadius="2xl"
-                position="relative"
-                minH="200px"
+      <FadeBox>
+        <Container maxW="6xl">
+          <VStack spacing={12}>
+            {/* Header */}
+            <VStack spacing={3} textAlign="center">
+              <Text fontSize="sm" color="gray.500">
+                Testimonial
+              </Text>
+              <Heading
+                fontSize={{ base: "18px", md: "32px", lg: "32px" }}
+                fontWeight="medium"
+                color="gray.600"
+                lineHeight="shorter"
+                letterSpacing={-0.5}
+                mb={6}
               >
-                {/* Quote Icon */}
-                <Quote
-                  size={28}
-                  style={{
-                    position: "absolute",
-                    top: "20px",
-                    left: "20px",
-                    opacity: 0.2,
-                  }}
-                />
+                What our clients say
+              </Heading>
+            </VStack>
 
-                {/* Text */}
-                <Text mt={10} fontSize="md" color="gray.700" lineHeight="1.6">
-                  {item.text}
-                </Text>
+            {/* Cards */}
+            <SimpleGrid
+              columns={{ base: 1, md: 2, lg: 3 }}
+              spacing={8}
+              w="full"
+            >
+              {testimonials.map((item, index) => (
+                <Box
+                  key={index}
+                  bg="white"
+                  p={6}
+                  borderRadius="2xl"
+                  position="relative"
+                  minH="200px"
+                >
+                  {/* Quote Icon */}
+                  <Quote
+                    size={28}
+                    style={{
+                      position: "absolute",
+                      top: "20px",
+                      left: "20px",
+                      opacity: 0.2,
+                    }}
+                  />
 
-                {/* User */}
-                <HStack mt={8} spacing={3}>
-                  <Avatar size="sm" src={item.avatar} />
-                  <Box>
-                    <Text fontWeight="semibold" fontSize="sm">
-                      {item.name}
-                    </Text>
-                    <Text fontSize="xs" color="gray.500">
-                      {item.handle}
-                    </Text>
-                  </Box>
-                </HStack>
-              </Box>
-            ))}
-          </SimpleGrid>
+                  {/* Text */}
+                  <Text mt={10} fontSize="md" color="gray.700" lineHeight="1.6">
+                    {item.text}
+                  </Text>
 
-          {/* Dots Indicator */}
-          <HStack spacing={2}>
-            <Box w="20px" h="2px" bg="black" borderRadius="full" />
-            <Box w="6px" h="2px" bg="gray.300" borderRadius="full" />
-            <Box w="6px" h="2px" bg="gray.300" borderRadius="full" />
-          </HStack>
-        </VStack>
-      </Container>
+                  {/* User */}
+                  <HStack mt={8} spacing={3}>
+                    <Avatar size="sm" src={item.avatar} />
+                    <Box>
+                      <Text fontWeight="semibold" fontSize="sm">
+                        {item.name}
+                      </Text>
+                      <Text fontSize="xs" color="gray.500">
+                        {item.handle}
+                      </Text>
+                    </Box>
+                  </HStack>
+                </Box>
+              ))}
+            </SimpleGrid>
+
+            {/* Dots Indicator */}
+            <HStack spacing={2}>
+              <Box w="20px" h="2px" bg="black" borderRadius="full" />
+              <Box w="6px" h="2px" bg="gray.300" borderRadius="full" />
+              <Box w="6px" h="2px" bg="gray.300" borderRadius="full" />
+            </HStack>
+          </VStack>
+        </Container>
+      </FadeBox>
     </Box>
   );
 }

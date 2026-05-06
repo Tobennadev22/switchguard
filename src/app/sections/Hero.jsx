@@ -39,6 +39,7 @@ export default function Hero() {
                 fontSize="sm"
                 mb={6}
                 mx={{ base: "auto", md: "0" }}
+                textAlign={{ base: "center", md: "left" }}
               >
                 Now Available: The Complete Resilience Bundle — £297
               </Box>

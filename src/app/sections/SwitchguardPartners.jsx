@@ -35,6 +35,7 @@ export default function SwitchguardPartners() {
             fontWeight="medium"
             color="gray.600"
             lineHeight="shorter"
+            letterSpacing={-0.5}
             mb={12}
           >
             Trusted expertise across global <br />

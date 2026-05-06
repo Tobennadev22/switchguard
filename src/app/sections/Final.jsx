@@ -18,7 +18,7 @@ export default function CTASection() {
     <Box bg="#f1f4f8" py={16}>
       <Container maxW="7xl">
         <Box
-          bg="#131e08"
+          bg="radial-gradient( circle farthest-corner at 96.1% 7.2%,  rgba(9,178,62,1) 0%, rgba(19,19,19,1) 100.2% )"
           borderRadius="2xl"
           px={{ base: 6, md: 12 }}
           py={{ base: 10, md: 16 }}
@@ -35,6 +35,7 @@ export default function CTASection() {
                 fontSize={{ base: "18px", md: "32px" }}
                 lineHeight="1.2"
                 fontWeight={"medium"}
+                letterSpacing={-0.5}
               >
                 Ready to Stop Losing Revenue?
               </Heading>
@@ -42,6 +43,7 @@ export default function CTASection() {
               <Text
                 color="whiteAlpha.800"
                 fontSize={{ base: "12px", md: "16px" }}
+                letterSpacing={-0.5}
               >
                 Book a free 30-minute discovery call. We will tell you exactly
                 where to start.
@@ -68,13 +70,13 @@ export default function CTASection() {
               align="center"
               position="relative"
               h="200px"
+              display={{ base: "none", md: "block" }}
             >
               <Image
                 src="/image/moneygear.png"
                 alt="switchguard-money-gear"
                 width={400}
                 height={200}
-                display={{ base: "none", md: "block" }}
               />
             </Flex>
           </Grid>

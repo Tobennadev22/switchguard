@@ -16,6 +16,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { BarChart3, Database, BookOpen } from "lucide-react";
+import FadeBox from "../utils/FadeBox";
 
 const resources = [
   {
@@ -57,71 +58,73 @@ export default function PaymentToolsPage() {
     <Box bg="#f9f9f9" minH="100vh" py={{ base: 10, md: 14 }}>
       <Container maxW="7xl">
         {/* HERO */}
-        <Grid
-          templateColumns={{ base: "1fr", lg: "1.4fr 0.8fr" }}
-          gap={{ base: 10, lg: 20 }}
-          alignItems="start"
-        >
-          <GridItem>
-            <Box
-              display="inline-block"
-              bgGradient="linear(to-r, orange.400, orange.600)"
-              color="white"
-              px={4}
-              py={1}
-              borderRadius="full"
-              fontSize="sm"
-              mb={6}
-              mx={{ base: 9, md: "0" }}
-            >
-              Forensic Payment Intelligence
-            </Box>
-
-            <Heading
-              fontSize={{ base: "3xl", md: "48px" }}
-              fontWeight="Regular"
-              lineHeight="1.2"
-              color="gray.600"
-              mb={6}
-              letterSpacing={-1.4}
-              textAlign={{ base: "center", md: "left" }}
-            >
-              Practical Tools for Payment Teams
-            </Heading>
-
-            <Text
-              mt={6}
-              maxW="620px"
-              fontSize={{ base: "1px", md: "16px" }}
-              color="gray.600"
-              lineHeight="1.6"
-            >
-              Playbooks, query libraries, and diagnostic tools built from 15
-              years inside African and European payment infrastructure.
-            </Text>
-          </GridItem>
-
-          <GridItem>
-            <Box
-              bg="primaryColor.100"
-              borderRadius="xl"
-              p={6}
-              mt={{ base: 0, lg: 16 }}
-              maxW="360px"
-              ml={{ base: 0, lg: "auto" }}
-            >
-              <Icon as={BarChart3} boxSize={6} color="gray.800" mb={5} />
-              <Text
-                fontWeight="700"
-                fontSize={{ base: "md", md: "lg" }}
-                lineHeight="1.5"
-                color="gray.700"
+        <FadeBox>
+          <Grid
+            templateColumns={{ base: "1fr", lg: "1.4fr 0.8fr" }}
+            gap={{ base: 10, lg: 20 }}
+            alignItems="start"
+          >
+            <GridItem>
+              <Box
+                display="inline-block"
+                bgGradient="linear(to-r, orange.400, orange.600)"
+                color="white"
+                px={4}
+                py={1}
+                borderRadius="full"
+                fontSize="sm"
+                mb={6}
+                mx={{ base: 9, md: "0" }}
               >
-                98.4% Precision rate in production-ready framework deployment.
+                Forensic Payment Intelligence
+              </Box>
+
+              <Heading
+                fontSize={{ base: "3xl", md: "48px" }}
+                fontWeight="Regular"
+                lineHeight="1.2"
+                color="gray.600"
+                mb={6}
+                letterSpacing={-1.4}
+                textAlign={{ base: "center", md: "left" }}
+              >
+                Practical Tools for Payment Teams
+              </Heading>
+
+              <Text
+                mt={6}
+                maxW="620px"
+                fontSize={{ base: "1px", md: "16px" }}
+                color="gray.600"
+                lineHeight="1.6"
+              >
+                Playbooks, query libraries, and diagnostic tools built from 15
+                years inside African and European payment infrastructure.
               </Text>
-            </Box>
-          </GridItem>
-        </Grid>
+            </GridItem>
+
+            <GridItem>
+              <Box
+                bg="primaryColor.100"
+                borderRadius="xl"
+                p={6}
+                mt={{ base: 0, lg: 16 }}
+                maxW="360px"
+                ml={{ base: 0, lg: "auto" }}
+              >
+                <Icon as={BarChart3} boxSize={6} color="gray.800" mb={5} />
+                <Text
+                  fontWeight="700"
+                  fontSize={{ base: "md", md: "lg" }}
+                  lineHeight="1.5"
+                  color="gray.700"
+                >
+                  98.4% Precision rate in production-ready framework deployment.
+                </Text>
+              </Box>
+            </GridItem>
+          </Grid>
+        </FadeBox>
 
         {/* SECTION HEADER */}
         <Flex
@@ -173,45 +176,49 @@ export default function PaymentToolsPage() {
 
                 {/* Text */}
                 <Box>
-                  <HStack spacing={3} mb={4} flexWrap="wrap">
-                    <Badge
-                      bg={
-                        item.status === "AVAILABLE NOW" ? "#b9e25b" : "#ff678d"
-                      }
-                      color="#111827"
-                      px={3}
-                      py={1}
-                      borderRadius="full"
-                      fontSize="10px"
-                      fontWeight="700"
-                      letterSpacing="0.08em"
+                  <FadeBox>
+                    <HStack spacing={3} mb={4} flexWrap="wrap">
+                      <Badge
+                        bg={
+                          item.status === "AVAILABLE NOW"
+                            ? "#b9e25b"
+                            : "#ff678d"
+                        }
+                        color="#111827"
+                        px={3}
+                        py={1}
+                        borderRadius="full"
+                        fontSize="10px"
+                        fontWeight="700"
+                        letterSpacing="0.08em"
+                      >
+                        {item.status}
+                      </Badge>
+
+                      <Text fontSize="sm" color="#6b7280">
+                        {item.type}
+                      </Text>
+                    </HStack>
+
+                    <Heading
+                      fontSize={{ base: "18px", md: "32px" }}
+                      lineHeight="1.15"
+                      fontWeight="semibold"
+                      color="gray.700"
+                      mb={4}
                     >
-                      {item.status}
-                    </Badge>
+                      {item.title}
+                    </Heading>
 
-                    <Text fontSize="sm" color="#6b7280">
-                      {item.type}
+                    <Text
+                      fontSize={{ base: "14px", md: "16px" }}
+                      color="gray.600"
+                      lineHeight="1.7"
+                      maxW="680px"
+                    >
+                      {item.desc}
                     </Text>
-                  </HStack>
-
-                  <Heading
-                    fontSize={{ base: "18px", md: "32px" }}
-                    lineHeight="1.15"
-                    fontWeight="semibold"
-                    color="gray.700"
-                    mb={4}
-                  >
-                    {item.title}
-                  </Heading>
-
-                  <Text
-                    fontSize={{ base: "14px", md: "16px" }}
-                    color="gray.600"
-                    lineHeight="1.7"
-                    maxW="680px"
-                  >
-                    {item.desc}
-                  </Text>
+                  </FadeBox>
                 </Box>
 
                 {/* Visual */}

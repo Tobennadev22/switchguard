@@ -13,7 +13,7 @@ import WhoWeServe from "./sections/WhoWeServe";
 import Testimonials from "./sections/Testimonials";
 export default function Home() {
   return (
-    <Box>
+    <Box mx="auto">
       <Hero />
       <SwitchguardPartners />
       <TheProblem />

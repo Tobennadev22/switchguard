@@ -11,6 +11,7 @@ import {
   Stack,
   Divider,
 } from "@chakra-ui/react";
+import FadeBox from "../utils/FadeBox";
 
 const PortfolioSection = () => {
   const expertise = [
@@ -72,45 +73,58 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <Box bg="#F9F7F2" py={20} minH="100vh" px={4}>
+    <Box
+      bg="#ffebafeb"
+      maxW="7xl"
+      py={20}
+      minH="100vh"
+      px={4}
+      mx="auto"
+      my={6}
+      borderRadius="xl"
+      blur={8}
+    >
       <Container maxW="container.lg">
         {/* --- Expertise Section --- */}
-        <VStack align="start" spacing={6} mb={20}>
-          <Heading size="lg" fontWeight="600">
-            Expertise & Skills
-          </Heading>
-          <Text color="gray.600" maxW="2xl">
-            A specialized toolkit developed at the intersection of legacy
-            banking infrastructure and modern fintech agility.
-          </Text>
-          <Flex wrap="wrap" gap={3}>
-            {expertise.map((item, index) => (
-              <Tag
-                key={index}
-                px={4}
-                py={3}
-                borderRadius="md"
-                bg={item.bg}
-                color={item.color || "black"}
-                fontSize="xs"
-                fontWeight="bold"
-                textTransform="none"
-              >
-                {item.label}
-              </Tag>
-            ))}
-          </Flex>
-        </VStack>
-
+        <FadeBox>
+          <VStack align="start" spacing={6} mb={20}>
+            <Heading size="lg" fontWeight="600">
+              Expertise & Skills
+            </Heading>
+            <Text color="gray.600" maxW="2xl">
+              A specialized toolkit developed at the intersection of legacy
+              banking infrastructure and modern fintech agility.
+            </Text>
+            <Flex wrap="wrap" gap={3}>
+              {expertise.map((item, index) => (
+                <Tag
+                  key={index}
+                  px={4}
+                  py={3}
+                  borderRadius="md"
+                  bg={item.bg}
+                  color={item.color || "black"}
+                  fontSize="xs"
+                  fontWeight="bold"
+                  textTransform="none"
+                >
+                  {item.label}
+                </Tag>
+              ))}
+            </Flex>
+          </VStack>
+        </FadeBox>
         {/* --- Notable Institutions Section --- */}
         <VStack align="start" spacing={6} mb={10}>
-          <Heading size="lg" fontWeight="600">
-            Notable Institutions
-          </Heading>
-          <Text color="gray.600">
-            A track record of engagement with industry-leading financial
-            organizations across the digital spectrum.
-          </Text>
+          <FadeBox>
+            <Heading size="lg" fontWeight="600">
+              Notable Institutions
+            </Heading>
+            <Text color="gray.600">
+              A track record of engagement with industry-leading financial
+              organizations across the digital spectrum.
+            </Text>
+          </FadeBox>
         </VStack>
 
         {/* Grid Container */}
@@ -121,75 +135,77 @@ const PortfolioSection = () => {
           overflow="hidden"
           bg="white"
         >
-          <SimpleGrid
-            columns={{ base: 1, md: 3 }}
-            divider={<Divider borderColor="gray.100" />}
-          >
-            {institutions.map((inst, id) => (
-              <Box
-                key={id}
-                p={8}
-                borderBottom="1px solid"
-                // borderRight={{ md: "1px solid" }}
-                borderColor="gray.100"
-                transition="all 0.3s"
-                _hover={{ bg: "#f1f1f1" }}
-              >
-                <Flex justify="space-between" mb={10}>
-                  <Text
-                    fontSize="2xs"
-                    fontWeight="800"
-                    color="#7BA428"
-                    letterSpacing="widest"
-                  >
-                    {inst.type}
-                  </Text>
-                  <Text fontSize="2xs" color="gray.300">
-                    {inst.id}
-                  </Text>
-                </Flex>
-                <Heading
-                  size="32px"
-                  mb={4}
-                  fontWeight="bold"
-                  letterSpacing="tight"
+          <FadeBox>
+            <SimpleGrid
+              columns={{ base: 1, md: 3 }}
+              divider={<Divider borderColor="gray.100" />}
+            >
+              {institutions.map((inst, id) => (
+                <Box
+                  key={id}
+                  p={8}
+                  borderBottom="1px solid"
+                  // borderRight={{ md: "1px solid" }}
+                  borderColor="gray.100"
+                  transition="all 0.3s"
+                  _hover={{ bg: "#f1f1f1" }}
                 >
-                  {inst.name}
+                  <Flex justify="space-between" mb={10}>
+                    <Text
+                      fontSize="2xs"
+                      fontWeight="800"
+                      color="#7BA428"
+                      letterSpacing="widest"
+                    >
+                      {inst.type}
+                    </Text>
+                    <Text fontSize="2xs" color="gray.300">
+                      {inst.id}
+                    </Text>
+                  </Flex>
+                  <Heading
+                    size="32px"
+                    mb={4}
+                    fontWeight="bold"
+                    letterSpacing="tight"
+                  >
+                    {inst.name}
+                  </Heading>
+                  <Text fontSize="sm" color="gray.500" lineHeight="tall">
+                    {inst.desc}
+                  </Text>
+                </Box>
+              ))}
+            </SimpleGrid>
+
+            {/* Footer Row */}
+            <SimpleGrid
+              columns={{ base: 1, md: 2 }}
+              bg="#E7E5DF"
+              p={10}
+              alignItems="center"
+            >
+              <VStack align="start" spacing={1}>
+                <Text
+                  fontSize="2xs"
+                  fontWeight="800"
+                  color="#7BA428"
+                  letterSpacing="widest"
+                >
+                  STRATEGIC PARTNERSHIP
+                </Text>
+                <Heading size="48px" fontWeight="bold" letterSpacing="tight">
+                  SIMPLIFY SYNERGY
                 </Heading>
-                <Text fontSize="sm" color="gray.500" lineHeight="tall">
-                  {inst.desc}
+              </VStack>
+              <Box mt={{ base: 6, md: 0 }}>
+                <Text fontStyle="italic" color="gray.600" fontSize="md">
+                  "Consulting on operational synergy and lean management in
+                  complex fintech ecosystems."
                 </Text>
               </Box>
-            ))}
-          </SimpleGrid>
-
-          {/* Footer Row */}
-          <SimpleGrid
-            columns={{ base: 1, md: 2 }}
-            bg="#E7E5DF"
-            p={10}
-            alignItems="center"
-          >
-            <VStack align="start" spacing={1}>
-              <Text
-                fontSize="2xs"
-                fontWeight="800"
-                color="#7BA428"
-                letterSpacing="widest"
-              >
-                STRATEGIC PARTNERSHIP
-              </Text>
-              <Heading size="48px" fontWeight="bold" letterSpacing="tight">
-                SIMPLIFY SYNERGY
-              </Heading>
-            </VStack>
-            <Box mt={{ base: 6, md: 0 }}>
-              <Text fontStyle="italic" color="gray.600" fontSize="md">
-                "Consulting on operational synergy and lean management in
-                complex fintech ecosystems."
-              </Text>
-            </Box>
-          </SimpleGrid>
+            </SimpleGrid>
+          </FadeBox>
         </Box>
       </Container>
     </Box>
