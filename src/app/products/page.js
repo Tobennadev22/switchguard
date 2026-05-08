@@ -1,10 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import Product from "../sections/Product";
+import Resources from "../sections/Products";
 
 function page() {
   return (
     <Box>
-      <Product />
+      <Resources />
     </Box>
   );
 }

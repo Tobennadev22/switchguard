@@ -11,7 +11,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { Quote } from "lucide-react";
-import FadeBox from "../utils/FadeBox";
+import FadeBox from "../src/app/utils/FadeBox";
 
 const testimonials = [
   {
@@ -56,19 +56,9 @@ export default function Testimonials() {
                 What our clients say
               </Heading>
             </VStack>
-            <Text
-              fontSize="6xl"
-              fontWeight="bold"
-              bgClip="text"
-              bgGradient="linear-gradient(to right, #d9e1e4, #283048)"
-              lineHeight="1.6"
-              textAlign="center"
-            >
-              Coming Soon...
-            </Text>
 
             {/* Cards */}
-            {/* <SimpleGrid
+            <SimpleGrid
               columns={{ base: 1, md: 2, lg: 3 }}
               spacing={8}
               w="full"
@@ -81,9 +71,9 @@ export default function Testimonials() {
                   borderRadius="2xl"
                   position="relative"
                   minH="200px"
-                > */}
-            {/* Quote Icon */}
-            {/* <Quote
+                >
+                  {/* Quote Icon */}
+                  <Quote
                     size={28}
                     style={{
                       position: "absolute",
@@ -91,15 +81,15 @@ export default function Testimonials() {
                       left: "20px",
                       opacity: 0.2,
                     }}
-                  /> */}
+                  />
 
-            {/* Text */}
-            {/* <Text mt={10} fontSize="md" color="gray.700" lineHeight="1.6">
+                  {/* Text */}
+                  <Text mt={10} fontSize="md" color="gray.700" lineHeight="1.6">
                     {item.text}
-                  </Text> */}
+                  </Text>
 
-            {/* User */}
-            {/* <HStack mt={8} spacing={3}>
+                  {/* User */}
+                  <HStack mt={8} spacing={3}>
                     <Avatar size="sm" src={item.avatar} />
                     <Box>
                       <Text fontWeight="semibold" fontSize="sm">
@@ -109,17 +99,17 @@ export default function Testimonials() {
                         {item.handle}
                       </Text>
                     </Box>
-                  </HStack> */}
-            {/* </Box>
+                  </HStack>
+                </Box>
               ))}
-            </SimpleGrid> */}
+            </SimpleGrid>
 
             {/* Dots Indicator */}
-            {/* <HStack spacing={2}>
+            <HStack spacing={2}>
               <Box w="20px" h="2px" bg="black" borderRadius="full" />
               <Box w="6px" h="2px" bg="gray.300" borderRadius="full" />
               <Box w="6px" h="2px" bg="gray.300" borderRadius="full" />
-            </HStack> */}
+            </HStack>
           </VStack>
         </Container>
       </FadeBox>

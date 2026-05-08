@@ -12,7 +12,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import FadeBox from "../utils/FadeBox";
+import FadeBox from "../src/app/utils/FadeBox";
 
 export default function Product() {
   return (
@@ -184,8 +184,8 @@ export default function Product() {
                   Payment Resilience Playbook SQL Implementation Vault
                 </Text>
 
-                {/* <Text fontSize={{ base: "18px", md: "24px" }}>£50</Text>*/}
-                <Box w="100%" h="1px" bg="gray.200" />
+                {/* <Text fontSize={{ base: "18px", md: "24px" }}>£50</Text>
+              <Box w="100%" h="1px" bg="gray.200" /> */}
 
                 <Button
                   as="a"
@@ -235,7 +235,7 @@ export default function Product() {
                 <Button
                   as="a"
                   href="https://payhip.com/b/XTh8G"
-                  mt={4}
+                  mt={2}
                   bg="primaryColor.700"
                   color="white"
                   rightIcon={<ArrowForwardIcon />}
