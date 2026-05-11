@@ -1,47 +1,3 @@
-// import { Resend } from "resend";
-
-// const resend = new Resend(process.env.RESEND_API_KEY);
-
-// export async function POST(req) {
-//   try {
-//     const { name, email, subject, message } = await req.json();
-
-//     if (!name || !email || !message) {
-//       return Response.json(
-//         { success: false, message: "All required fields missing." },
-//         { status: 400 },
-//       );
-//     }
-
-//     await resend.emails.send({
-//       from: "support@switchguardadvisory.com",
-//       to: process.env.CONTACT_TO,
-//       reply_to: email,
-//       subject: subject || "New Contact Form Message",
-//       html: `
-//         <h2>New Contact Message</h2>
-//         <p><b>Name:</b> ${name}</p>
-//         <p><b>Email:</b> ${email}</p>
-//         <p><b>Subject:</b> ${subject || "N/A"}</p>
-//         <p><b>Message:</b></p>
-//         <p>${message}</p>
-//       `,
-//     });
-
-//     return Response.json({
-//       success: true,
-//       message: "Message sent successfully!",
-//     });
-//   } catch (error) {
-//     console.log(error);
-
-//     return Response.json(
-//       { success: false, message: "Something went wrong." },
-//       { status: 500 },
-//     );
-//   }
-// }
-
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -67,9 +23,9 @@ export async function POST(req) {
     }
 
     await resend.emails.send({
-      from: "noreply@@switchguardadvisory.com",
+      from: "noreply@switchguardadvisory.com",
       to: process.env.CONTACT_TO,
-      reply_to: email,
+      replyTo: email,
       subject: `New Contact Inquiry - ${company}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height:1.6; color:#111;">
