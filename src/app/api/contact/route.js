@@ -67,7 +67,7 @@ export async function POST(req) {
     }
 
     await resend.emails.send({
-      from: "info@switchguardadvisory.com",
+      from: "noreply@@switchguardadvisory.com",
       to: process.env.CONTACT_TO,
       reply_to: email,
       subject: `New Contact Inquiry - ${company}`,
